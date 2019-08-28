@@ -1,0 +1,20 @@
+<%= form_with(model: user,  local: true) do |f| %>
+
+<%= f.label :nombre, 'Nombre' %>
+<%= f.text_field :nombre %>
+
+<%= f.label :programa, 'Programa' %>
+<%= f.check_box :programa %>
+
+<%= f.label :programa, 'Birthdate' %>
+<%= f.date_select :birthdate %>
+
+<%= f.label :programa, 'Birthdate' %>
+<%= f.time_select :work_time %>
+<br>
+<%= f.radio_button :autolyse, "opc1", true %>
+    <%= f.label :autolyse, "No", :value => "false" %>
+    <%= f.radio_button :autolyse, "opc2", false, :checked => true %>
+
+
+<% end %>
